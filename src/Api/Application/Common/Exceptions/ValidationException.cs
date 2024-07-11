@@ -1,6 +1,4 @@
-﻿using FluentValidation.Results;
-
-namespace ProfessorAssignmentApi.Api.Application.Common.Exceptions;
+﻿namespace ProfessorAssignmentApi.Api.Application.Common.Exceptions;
 
 /// <summary>
 /// Represents an exception that occurs when one or more validation failures have occurred.

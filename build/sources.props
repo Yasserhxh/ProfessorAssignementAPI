@@ -4,7 +4,6 @@
 		<RestoreSources>$(DotNetRestoreSources)</RestoreSources>
 		<RestoreSources Condition="'$(DotNetBuildOffline)' != 'true'">
 			$(RestoreSources);
-			https://pkgs.dev.azure.com/AlexsysFoundations/_packaging/NuGet-NetCore/nuget/v3/index.json;
 		</RestoreSources>
 	</PropertyGroup>
 </Project>

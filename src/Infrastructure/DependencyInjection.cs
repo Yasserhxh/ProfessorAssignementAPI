@@ -1,9 +1,4 @@
-﻿using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using ProfessorAssignmentApi.Infrastructure.Repositories;
-
-namespace ProfessorAssignmentApi.Infrastructure;
-
+﻿namespace ProfessorAssignmentApi.Infrastructure;
 /// <summary>
 /// Represents a static class for dependency injection configuration.
 /// </summary>
@@ -18,6 +13,10 @@ public static class DependencyInjection
     public static IServiceCollection AddInfrastructureServices(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddScoped<IProfessorRepository, ProfessorRepository>();
-        return services;
+
+		// Add database connection string to the configuration
+		services.AddTransient<IDbConnection>(sp => new SqlConnection(
+			configuration.GetConnectionString("DefaultConnection")));
+		return services;
     }
 }

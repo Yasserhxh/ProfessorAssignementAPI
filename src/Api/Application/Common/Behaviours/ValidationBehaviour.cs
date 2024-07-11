@@ -1,6 +1,4 @@
-﻿using FluentValidation;
-using MediatR;
-using ValidationException = ProfessorAssignmentApi.Api.Application.Common.Exceptions.ValidationException;
+﻿using ValidationException = ProfessorAssignmentApi.Api.Application.Common.Exceptions.ValidationException;
 
 namespace ProfessorAssignmentApi.Api.Application.Common.Behaviours;
 

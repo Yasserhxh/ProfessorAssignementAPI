@@ -1,6 +1,4 @@
-﻿using MediatR;
-
-namespace ProfessorAssignmentApi.Api.Application.Professors.GetProfessor;
+﻿namespace ProfessorAssignmentApi.Api.Application.Professors.GetProfessor;
 
 /// <summary>
 /// Represents a query object used to retrieve details of a professor by their email address.

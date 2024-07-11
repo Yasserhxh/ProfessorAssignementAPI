@@ -20,8 +20,8 @@ public class Subject
     /// </summary>
     public string NameFr { get; set; } = default!;
 
-    /// <summary>
-    /// Gets or sets the list of levels associated with the subject.
-    /// </summary>
-    public List<Level> Levels { get; set; } = [];
+	/// <summary>
+	/// Gets or sets the list of levels associated with the subject.
+	/// </summary>
+	public List<Level> Levels { get; set; } = [];
 }

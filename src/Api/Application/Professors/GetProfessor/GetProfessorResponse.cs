@@ -1,6 +1,11 @@
-﻿namespace ProfessorAssignmentApi.Api.Application.Professors.GetProfessor;
+﻿using ProfessorAssignmentApi.Api.Application.Common.Models;
 
-public class GetProfessorResponse
+namespace ProfessorAssignmentApi.Api.Application.Professors.GetProfessor;
+
+/// <summary>
+/// Represents the response for getting a professor.
+/// </summary>
+public record GetProfessorResponse : ProfessorDTO
 {
-    public string ProfessorId { get; set; } = default!;
+
 }

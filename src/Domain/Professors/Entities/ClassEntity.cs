@@ -8,7 +8,7 @@ public class ClassEntity
     /// <summary>
     /// Gets or sets the identifier of the classroom.
     /// </summary>
-    public string Id { get; set; } = default!;
+    public Guid Id { get; set; } = default!;
 
     /// <summary>
     /// Gets or sets the name of the classroom.

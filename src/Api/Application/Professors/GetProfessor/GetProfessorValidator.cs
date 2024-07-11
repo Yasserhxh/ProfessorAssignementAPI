@@ -1,6 +1,4 @@
-﻿using FluentValidation;
-
-namespace ProfessorAssignmentApi.Api.Application.Professors.GetProfessor;
+﻿namespace ProfessorAssignmentApi.Api.Application.Professors.GetProfessor;
 
 public class GetProfessorValidator : AbstractValidator<GetProfessorQuery>
 {

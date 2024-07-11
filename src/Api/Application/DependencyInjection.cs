@@ -1,11 +1,4 @@
-﻿using FluentValidation;
-using Mapster;
-using MapsterMapper;
-using MediatR;
-using ProfessorAssignmentApi.Api.Application.Common.Behaviours;
-using System.Reflection;
-
-namespace ProfessorAssignmentApi.Api.Application;
+﻿namespace ProfessorAssignmentApi.Api.Application;
 
 /// <summary>
 /// A static class containing extension methods to configure dependency injection for application services.

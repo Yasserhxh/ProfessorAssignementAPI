@@ -8,7 +8,7 @@ public sealed class School
     /// <summary>
     /// Gets or sets the code of the school.
     /// </summary>
-    public string SchoolCode { get; set; } = default!;
+    public string Code { get; set; } = default!;
 
     /// <summary>
     /// Gets or sets the Arabic name of the school.

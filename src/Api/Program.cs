@@ -1,7 +1,3 @@
-using Microsoft.Extensions.Diagnostics.HealthChecks;
-using ProfessorAssignmentApi.Api.Application;
-using ProfessorAssignmentApi.Api.Filters;
-
 var builder = WebApplication.CreateBuilder(args);
 
 
@@ -44,7 +40,9 @@ builder.Services
 
 // [You can add your own application services here...]
 builder.Services
-    .AddApplicationServices();
+    .AddApplicationServices()
+    .AddInfrastructureServices(builder.Configuration); ;
+
 
 var app = builder.Build();
 
