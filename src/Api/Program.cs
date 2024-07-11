@@ -41,7 +41,15 @@ builder.Services
 // [You can add your own application services here...]
 builder.Services
     .AddApplicationServices()
-    .AddInfrastructureServices(builder.Configuration); ;
+    .AddInfrastructureServices(builder.Configuration).AddCors(options =>
+    {
+        options.AddPolicy("AllowAll", builder =>
+        {
+            builder.AllowAnyOrigin()
+                   .AllowAnyMethod()
+                   .AllowAnyHeader();
+        });
+    });
 
 
 var app = builder.Build();
@@ -62,6 +70,7 @@ if (app.Environment.IsDevelopment())
 
 app
     .UseRouting()
+    .UseCors("AllowAll") // Apply the CORS policy
     .UseResponseCompression()
     .UseAuthorization();
 
