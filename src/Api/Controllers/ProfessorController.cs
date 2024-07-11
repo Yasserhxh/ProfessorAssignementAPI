@@ -29,8 +29,17 @@ namespace ProfessorAssignmentApi.Api.Controllers
 		[ProducesResponseType(StatusCodes.Status200OK)]
 		[ProducesResponseType(StatusCodes.Status400BadRequest)]
 		[ProducesResponseType(StatusCodes.Status404NotFound)]
-		public async Task<IActionResult> GetProfessor([FromQuery] GetProfessorQuery query)
-		{
+		public async Task<IActionResult> GetProfessor()
+		{  
+			// Extract email from the JWT token
+			var email = User.Claims.FirstOrDefault(c => c.Type == "emails")?.Value;
+			if (email == null)
+			{
+				return BadRequest("Email claim not found in token.");
+			}
+
+			// Set the email in the query
+			var query = new GetProfessorQuery(){Email = email};
 			// Send the request to the mediator to handle
 			var response = await _mediator.Send(query);
 

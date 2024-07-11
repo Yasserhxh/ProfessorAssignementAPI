@@ -18,7 +18,7 @@ public class ValidationException : Exception
     /// Initializes a new instance of the <see cref="ValidationException"/> class with a collection of validation failures.
     /// </summary>
     /// <param name="failures">Collection of validation failures.</param>
-    public ValidationException(IEnumerable<ValidationFailure> failures)
+    public ValidationException(IEnumerable<FluentValidation.Results.ValidationFailure> failures)
         : this()
     {
         Errors = failures

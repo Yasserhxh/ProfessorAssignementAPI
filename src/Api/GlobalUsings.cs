@@ -13,4 +13,6 @@ global using Mapster;
 global using MapsterMapper;
 global using ProfessorAssignmentApi.Api.Application.Common.Behaviours;
 global using System.Reflection;
+global using Microsoft.IdentityModel.Tokens;
+global using Microsoft.AspNetCore.Authentication.JwtBearer;
 #pragma warning restore S1128
